@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    
+    <center><h1>Citius Vide</h1></center>
+    
+    <div class="switch-container">
+            <input type="checkbox" id="toggleSwitch">
+        <button id="refreshButton" class="refresh-btn"></button>
+    </div>
+    <br>
+    <div class="switch-container">
+        <label for="colorOverrideSwitch" class="small-switch-label">Color Override:</label>
+        <label class="small-switch">
+            <input type="checkbox" id="colorOverrideSwitch">
+            <span class="small-slider"></span>
+        </label>
+    </div>
+    
+    <br>
+
+    <div class="switch-container">
+        <label for="colorPicker" class="color-picker-label">Choose Color:</label>
+        <input type="color" id="colorPicker" value="#5684E1">
+    </div>
+    
+    <script src="popup.js"></script>
+</body>
+</html>

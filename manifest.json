@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Citius Vide",
+  "version": "1.0",
+  "description": "Read Faster with TextVide",
+  "icons": {
+    "64": "icon.png"
+  },
+  "permissions": ["activeTab", "storage", "tabs"],
+  "action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["index.iife.js","inject.js"]
+    }
+  ],
+  "host_permissions": ["*://*/*"]
+}
