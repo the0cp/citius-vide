@@ -8,6 +8,15 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   }
 });
 
+chrome.storage.sync.get(["isEnabled", "isColorOverrideEnabled", "textVideColor"], ({ isEnabled, isColorOverrideEnabled, textVideColor }) => {
+  if(isEnabled) {
+    const color = isColorOverrideEnabled ? textVideColor : null;
+    activateTextVide(color);
+  }else{
+    deactivateTextVide();
+  }
+});
+
 function activateTextVide(color) {
   let textNodes = getTextNodes(document.body);
   textNodes.forEach((node) => {
@@ -48,15 +57,5 @@ function getTextNodes(element) {
   }
   return textNodes;
 }
-
-chrome.storage.sync.get(["isEnabled", "isColorOverrideEnabled", "textVideColor"], ({ isEnabled, isColorOverrideEnabled, textVideColor }) => {
-  if(isEnabled) {
-    deactivateTextVide();
-    const color = isColorOverrideEnabled ? textVideColor : null;
-    activateTextVide(color);
-  }else{
-    deactivateTextVide();
-  }
-});
 
 console.log("Content script loaded");

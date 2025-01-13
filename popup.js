@@ -8,6 +8,9 @@ chrome.storage.sync.get(["isEnabled", "isColorOverrideEnabled", "textVideColor"]
   colorOverrideSwitch.checked = isColorOverrideEnabled;
   if(textVideColor) {
     colorPicker.value = textVideColor;
+  }else{
+    chrome.storage.sync.set({ textVideColor: '#5684E1' });
+    colorPicker.value = '#5684E1';
   }
 });
 
@@ -33,7 +36,8 @@ colorOverrideSwitch.addEventListener("change", () => {
 });
 
 colorPicker.addEventListener("input", () => {
-  chrome.storage.sync.set({ textVideColor: colorPicker.value });
+  const color = colorPicker.value;
+  chrome.storage.sync.set({ textVideColor: color });
   refreshButton.style.display = 'block';
 });
 
@@ -43,3 +47,16 @@ refreshButton.addEventListener('click', () => {
         refreshButton.style.display = 'none';
     });
 });
+
+function updateContentScript() {
+  const isEnabled = toggleSwitch.checked;
+  const isColorOverrideEnabled = colorOverrideSwitch.checked;
+  const color = isColorOverrideEnabled ? colorPicker.value : null;
+
+  chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+    chrome.tabs.sendMessage(tabs[0].id, {
+      action: isEnabled ? "activateTextVide" : "deactivateTextVide",
+      color: color
+    });
+  });
+}
