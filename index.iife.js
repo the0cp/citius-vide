@@ -9,7 +9,7 @@ var textVide = function (L) {
       const style = color ? `style="color: ${color};"` : "";
       return I(t, {
         sep: [`<b ${style}>`, "</b>"],
-        fixationPoint: 1,
+        fixationPoint: 3,
         ignoreHtmlTag: true,
         ignoreHtmlEntity: true
       });
