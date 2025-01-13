@@ -10,7 +10,7 @@ License: MIT license
 
 ## Installation
 
-- Download the zip: [https://github.com/the0cp/citius-vide/releases/download/v1.0/citius-vide.zip](https://github.com/the0cp/citius-vide/releases/download/v1.0/citius-vide.zip)
+- Download the `citius-vide.zip` from Release: [https://github.com/the0cp/citius-vide/releases](https://github.com/the0cp/citius-vide/releases)
 - Extract the contents of the ZIP file to a folder.
 - Enable "Developer mode" in Chrome Extensions page
 - Choose "Load Unpacked" navigate to the folder and select it.
