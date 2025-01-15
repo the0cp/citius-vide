@@ -17,4 +17,4 @@ License: MIT license
 
 ## Preview
 
-![image](https://github.com/user-attachments/assets/1a7ca33f-8644-42b9-a323-6897eaa151f9)
+![image](https://github.com/user-attachments/assets/b7fdc65a-9497-43b7-b2d3-def7fd74bf21)
