@@ -17,8 +17,4 @@ License: MIT license
 
 ## Preview
 
-<div style="display: flex; gap: 10px;">
-    <img src="https://github.com/user-attachments/assets/b7fdc65a-9497-43b7-b2d3-def7fd74bf21" alt="Image 1" style=>
-    <img src="https://github.com/user-attachments/assets/e196d4ce-b402-4566-8fa0-4c9f5c71b18b" alt="Image 2" style="width: 70%;">
-</div>
-
+![image](https://github.com/user-attachments/assets/3255c106-65e4-445f-a360-9769d7337613)
