@@ -7,14 +7,14 @@ body {
 
 @font-face {
   font-family: 'Dafoe';
-  src: url('MrDafoe-Regular.ttf') format('truetype');
+  src: url('MrDafoe.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'FontAwesome';
-  src: url('fa-solid-900.ttf') format('truetype');
+  src: url('fa-solid.ttf') format('truetype');
   font-weight: normal;
   font-style: normal
 }
