@@ -1,29 +1,29 @@
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   if(request.action === "activateTextVide") {
     isEnabled = true;
-    activateTextVide(request.color);
+    activateTextVide(request.color, request.fixationPoint);
   }else if(request.action === "deactivateTextVide") {
     isEnabled = false;
     deactivateTextVide();
   }
 });
 
-chrome.storage.sync.get(["isEnabled", "isColorOverrideEnabled", "textVideColor"], ({ isEnabled, isColorOverrideEnabled, textVideColor }) => {
+chrome.storage.sync.get(["isEnabled", "isColorOverrideEnabled", "textVideColor", "fixationPoint"], ({ isEnabled, isColorOverrideEnabled, textVideColor, fixationPoint }) => {
   if(isEnabled) {
     const color = isColorOverrideEnabled ? textVideColor : null;
-    activateTextVide(color);
+    activateTextVide(color, fixationPoint);
   }else{
     deactivateTextVide();
   }
 });
 
-function activateTextVide(color) {
+function activateTextVide(color, fixationPoint) {
   let textNodes = getTextNodes(document.body);
   textNodes.forEach((node) => {
     if(!node.parentNode.getAttribute("data-original-text")) {
       node.parentNode.setAttribute("data-original-text", node.nodeValue);
     }
-    let videText = textVide.textVide(node.nodeValue, color); // Use the textVide API
+    let videText = textVide.textVide(node.nodeValue, color, fixationPoint); // Use the textVide API
     let newNode = document.createElement("span");
     newNode.innerHTML = videText;
     node.parentNode.replaceChild(newNode, node);

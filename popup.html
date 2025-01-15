@@ -13,7 +13,9 @@
             <input type="checkbox" id="toggleSwitch">
         <button id="refreshButton" class="refresh-btn"></button>
     </div>
-    <br>
+
+    <div class="divider"></div>
+
     <div class="switch-container">
         <label for="colorOverrideSwitch" class="small-switch-label">Color Override:</label>
         <label class="small-switch">
@@ -21,12 +23,20 @@
             <span class="small-slider"></span>
         </label>
     </div>
-    
-    <br>
 
     <div class="switch-container">
-        <label for="colorPicker" class="color-picker-label">Choose Color:</label>
+        <span id="colorValue">#5684E1</span>
         <input type="color" id="colorPicker" value="#5684E1">
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="slider-container">
+        <label for="fixationPointSlider" class="fixation-point-label">Fixation Point:</label>
+        <div class="slider-wrapper">
+            <input type="range" id="fixationPointSlider" min="1" max="5" step="1" value="3">
+            <span id="sliderValue">3</span>
+        </div>
     </div>
     
     <script src="popup.js"></script>
