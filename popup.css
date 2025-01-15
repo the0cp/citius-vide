@@ -178,14 +178,23 @@ input[type="color"]::-moz-color-swatch {
 }
 
 .refresh-btn {
-  background: url('refresh.png') no-repeat center center;
-  background-size: contain;
+  background: transparent;
+  font-family: 'FontAwesome';
+  color: #10c4d1;
   border: none;
   width: 24px;
   height: 24px;
   cursor: pointer;
   margin-left: 10px;
+  display: inline-block;
+  text-align: center;
+  line-height: 24px;
+  font-size: 24px;
   display: none;
+}
+
+.refresh-btn::before {
+  content: "\f021";
 }
 
 .refresh-btn[style="display: block;"] {
