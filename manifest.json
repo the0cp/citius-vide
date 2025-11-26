@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Citius Vide",
+  "name": "Bionic Reading Citius Vide",
   "version": "1.2.2",
-  "description": "Read Faster with TextVide",
+  "description": "Bionic Reading, read Faster with TextVide",
   "icons": {
     "64": "icon.png"
   },
