@@ -8,7 +8,11 @@ More about TextVide: [https://github.com/Gumball12/text-vide](https://github.com
 
 License: MIT license
 
-## Installation
+## Install from Chrome Web Store
+
+[https://chromewebstore.google.com/detail/cllpokdpfkelkceomncfgebkegnjepdc?utm_source=item-share-cb](https://chromewebstore.google.com/detail/cllpokdpfkelkceomncfgebkegnjepdc?utm_source=item-share-cb)
+
+## Install from source code
 
 - Download the `citius-vide.zip` from Release: [https://github.com/the0cp/citius-vide/releases](https://github.com/the0cp/citius-vide/releases)
 - Extract the contents of the ZIP file to a folder.
